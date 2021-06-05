@@ -15,12 +15,12 @@ calculator.addEventListener('click', function(event) {
     case 'C':
       clear();
       break;
-    case '<-':
+    case '←':
       backspace();
       break;
-    case '/':
-    case 'x':
-    case '-':
+    case '÷':
+    case '×':
+    case '−':
     case '+':
       currentOperation = buttonPressed;
       operand1 = result.innerText;
@@ -64,13 +64,13 @@ function performOperation(operation, operand1, operand2) {
   if(operation === '+'){
     result.innerText = parseInt(operand1) + parseInt(operand2);
   }
-  else if(operation === '-'){
+  else if(operation === '−'){
     result.innerText = parseInt(operand1) - parseInt(operand2);
   }
-  else if(operation === 'x'){
+  else if(operation === '×'){
     result.innerText = parseInt(operand1) * parseInt(operand2);
   }
-  else if(operation === '/'){
+  else if(operation === '÷'){
     result.innerText = parseInt(operand1) / parseInt(operand2);
   }
 }
